@@ -1,0 +1,88 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0D1836;
+}
+.head{
+    width: 100vw;
+    height: 60px;
+    background-color: #0D1836;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .logo{
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:24px;
+        .logo-img{
+            width: 40px;
+            height:40px;
+            background-color: aquamarine;
+            margin-right: 15px;
+        }
+        
+    }
+    .nav{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        ul.nav-menu{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            .nav-menu-li{
+                width: 180px;
+                height: 100%;
+                // background: #f014c036;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                label.nav_btn{
+                    display: block;
+                    user-select: none;
+                    width: 100%;
+                    height: 100%;
+                    // background: #14f08936;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url('../img/nav-button.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #66D4EF;
+                    cursor: pointer;
+                    &:hover{
+                        background-image: url('../img/nav-button-hover.png');
+                        color: #66D4EF;
+                        opacity: 0.9;
+                    }
+                    &:active{
+                        transform: scale(0.99);
+                    }
+                }
+                    input#nav_btn1:checked~label[for='nav_btn1'],
+                    input#nav_btn2:checked~label[for='nav_btn2'],
+                    input#nav_btn3:checked~label[for='nav_btn3'],
+                    input#nav_btn4:checked~label[for='nav_btn4'],
+                    input#nav_btn5:checked~label[for='nav_btn5'],
+                    input#nav_btn6:checked~label[for='nav_btn6']
+                    {
+                    background-image: url('../img/nav-button-active.png');
+                    color: #ffffff;
+                }
+                input[type='radio']{
+                    display: none;
+                }
+                
+            }
+        }
+    }
+}

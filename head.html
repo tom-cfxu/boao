@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博奥隧道</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/head.css">
+</head>
+
+<body>
+    <div class="head">
+        <!-- logo -->
+        <div class="logo">
+            <div class="logo-img"></div>
+            博奥隧道项目
+        </div>
+        <!-- 导航栏 -->
+        <div class="nav">
+            <ul id="nav_ul" class="nav-menu">
+                <li class="nav-menu-li">
+                    <input id="nav_btn1" type="radio" name="nav" value="首页" checked onchange="menuBtn(this)"></input>
+                    <label class="nav_btn" for="nav_btn1">首页</label>
+                </li>
+                <li class="nav-menu-li">
+                    <input id="nav_btn2" type="radio" name="nav" value="环控系统" onclick="menuBtn(this)"></input>
+                    <label class="nav_btn" for="nav_btn2">环控系统</label>
+                </li>
+                <li class="nav-menu-li">
+                    <input id="nav_btn3" type="radio" name="nav" value="交通控制系统" onclick="menuBtn(this)"></input>
+                    <label class="nav_btn" for="nav_btn3">交通控制系统</label>
+                </li>
+                <li class="nav-menu-li">
+                    <input id="nav_btn4" type="radio" name="nav" value="视频监控系统" onclick="menuBtn(this)"></input>
+                    <label class="nav_btn" for="nav_btn4">视频监控系统</label>
+                </li>
+                <li class="nav-menu-li">
+                    <input id="nav_btn5" type="radio" name="nav" value="报表系统" onclick="menuBtn(this)"></input>
+                    <label class="nav_btn" for="nav_btn5">报表系统</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/head.js"></script>
+</body>
+
+</html>
