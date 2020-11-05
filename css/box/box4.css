@@ -1,0 +1,75 @@
+.box4 {
+  width: 100%;
+  height: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-template-areas: "info1 info2" "info3 info4" "info5 info6";
+}
+.box4 div.box4-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.box4 div.box4-info .info1 {
+  grid-area: info1;
+}
+.box4 div.box4-info .info2 {
+  grid-area: info2;
+}
+.box4 div.box4-info .info3 {
+  grid-area: info3;
+}
+.box4 div.box4-info .info4 {
+  grid-area: info4;
+}
+.box4 div.box4-info .info5 {
+  grid-area: info5;
+}
+.box4 div.box4-info .info6 {
+  grid-area: info6;
+}
+.box4 div.box4-info .box4-info-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box4 div.box4-info .box4-info-left input {
+  width: 100px;
+  height: 40px;
+  background-color: #1D9CD1;
+  border: 1px solid #01887d;
+  color: #fff;
+  font-size: 24px;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: inset 0 0 10px #b8eeff, 0 0 10px 0px #34e7ff;
+}
+.box4 div.box4-info .box4-info-left label {
+  margin-top: 5px;
+  color: #1D9CD1;
+  font-weight: bold;
+  font-size: 14px;
+}
+.box4 div.box4-info .box4-info-right {
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.box4 div.box4-info .box4-info-right input {
+  width: 40px;
+  height: 25px;
+  background-color: transparent;
+  border: 1px solid #1D9CD1;
+  color: #fff;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+}

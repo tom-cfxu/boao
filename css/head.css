@@ -14,7 +14,8 @@ body {
   align-items: center;
 }
 .head .logo {
-  flex-grow: 1;
+  position: absolute;
+  width: 250px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -39,7 +40,7 @@ body {
   align-items: center;
 }
 .head .nav ul.nav-menu .nav-menu-li {
-  width: 180px;
+  width: 160px;
   height: 100%;
   display: flex;
   justify-content: center;

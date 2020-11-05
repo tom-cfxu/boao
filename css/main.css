@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   background-image: radial-gradient(#11286E 5%, #0D1836 60%);
@@ -19,7 +20,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(12, 1fr);
-  grid-template-areas: 'cell1 cell2 cell3' 'cell1 cell2 cell3' 'cell1 cell2 cell5' 'cell1 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8';
+  grid-template-areas: 'cell1 cell2 cell3' 'cell1 cell2 cell3' 'cell1 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8';
   grid-gap: 10px;
 }
 .main .cell {
@@ -51,6 +52,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.main .cell .box {
+  padding-top: 40px;
+}
+.main .cell .box p.menu {
+  pointer-events: none;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .cell .box p.menu img.menu-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.main .cell .box p.menu span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5dc9ff;
+  user-select: none;
 }
 .main .cell1 {
   grid-area: cell1;
@@ -75,4 +101,18 @@ body {
 }
 .main .cell8 {
   grid-area: cell8;
+}
+a.btn_change {
+  display: inline-block;
+  text-align: center;
+  line-height: 25px;
+  width: 40px;
+  height: 25px;
+  background-color: #1D9CD1;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 5px;
+}
+a.btn_change:active {
+  transform: scale(0.9);
 }

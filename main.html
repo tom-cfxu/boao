@@ -7,28 +7,55 @@
     <title>博鳌隧道</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/box/box1.css">
+    <link rel="stylesheet" href="./css/box/box4.css">
+    <link rel="stylesheet" href="./css/box/box6.css">
+    <link rel="stylesheet" href="./css/box/box7.css">
+    <script src="./js/echarts.min.js"></script>
 </head>
 
 <body>
+    <!-- <iframe class="header" src="./head.html" frameborder="0"></iframe> -->
     <div class="main">
         <div class="cell cell1">
             <div class="content box">
-                1
+                <div class="box1">
+                    <div id="pie-car" height="100" class="box1-left">
+
+                    </div>
+                    <div id="car-info" class="box1-right">
+                        <div class="box1-right-div">
+                            <div class="box1-icon box1-icon1">车</div>
+                            <p class="box1-right-info">
+                                总车辆数
+                                <span id="box1-sum" class="box1-right-value">60 辆</span>
+                            </p>
+                        </div>
+                        <div class="box1-right-div">
+                            <div class="box1-icon box1-icon2">速</div>
+                            <p class="box1-right-info">
+                                平均车速
+                                <span id="box1-speed" class="box1-right-value">60 km/h</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="cell cell2">
             <div class="content">
-                2
+
             </div>
         </div>
         <div class="cell cell3">
-            <div class="content box">
+            <div class="content">
                 3
             </div>
         </div>
         <div class="cell cell4">
-            <div class="content box">
-                4
+            <div class="content box ">
+                <div id="box4" class="box4"></div>
             </div>
         </div>
         <div class="cell cell5">
@@ -37,13 +64,17 @@
             </div>
         </div>
         <div class="cell cell6">
-            <div class="content box">
-                6
+            <div class="content box ">
+                <div id="box6" class="box6">
+                </div>
+
             </div>
         </div>
         <div class="cell cell7">
             <div class="content box">
-                7
+                <div id="box7" class="box7"></div>
+            </div>
+            <div id="alarm-border" class="alarm-border alarm">
             </div>
         </div>
         <div class="cell cell8">
@@ -52,6 +83,10 @@
             </div>
         </div>
     </div>
+    <script src="js/changeValue.js"></script>
+    <script src="js/main_initPage.js"></script>
+    <script src="js/main_echart.js"></script>
+    <script src="js/onload.js"></script>
 </body>
 
 </html>

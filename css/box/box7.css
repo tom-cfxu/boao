@@ -1,0 +1,49 @@
+.box7 {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+.cell7 .alarm-border {
+  position: absolute;
+  pointer-events: none;
+  width: 100% ;
+  height: 100% ;
+  background-color: transparent;
+  border: 5px dashed #F95C5D;
+  overflow: hidden;
+}
+.cell7 .alarm-border.alarm {
+  display: block;
+  border-color: #F95C5D;
+  animation: 0.5s box7AlarmBorder linear infinite;
+}
+.cell7 .alarm-border.safe {
+  display: block;
+  border-color: #5cf971;
+  animation: box7SafeBorder 1s  linear;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes box7AlarmBorder {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes box7SafeBorder {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
