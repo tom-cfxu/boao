@@ -12,6 +12,9 @@ function box4_changevalue(input, input_show) {
 function box6_changeMsg(title, msg) {
 
     var msgNew = window.prompt("请输入新值", msg.innerText);
-    msg.innerText = msgNew;
-    window.alert(title.innerText + msgNew);
+    if (msgNew != null) {
+        msg.innerText = msgNew;
+        window.alert(title.innerText + msgNew);
+    }
+
 }

@@ -2,7 +2,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   background-image: radial-gradient(#11286E 5%, #0D1836 60%);
@@ -20,7 +19,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(12, 1fr);
-  grid-template-areas: 'cell1 cell2 cell3' 'cell1 cell2 cell3' 'cell1 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8';
+  grid-template-areas: 'cell1 cell2 cell3' 'cell1 cell2 cell5' 'cell1 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell8' 'cell4 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8' 'cell6 cell7 cell8';
   grid-gap: 10px;
 }
 .main .cell {

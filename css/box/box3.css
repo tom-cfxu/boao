@@ -1,0 +1,64 @@
+.box3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: inherit;
+  height: 100%;
+}
+.box3 .box3-box {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.box3 .box3-box .box3-title {
+  text-align: center;
+  width: 120px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1D9CD1;
+}
+.box3 .box3-box .box3-value {
+  flex-grow: 1;
+  height: inherit;
+  padding: 4px 5px;
+  padding-right: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "a1 a2 a3 a4 a5";
+  grid-gap: 10px;
+}
+.box3 .box3-box .box3-value .box3-value-a {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #0000004d;
+  color: #FAAF6B;
+  font-size: 30px;
+  font-family: yejing;
+  user-select: none;
+  border-radius: 4px;
+}
+@font-face {
+  font-family: yejing;
+  src: url('/fonts/LESLIE.ttf');
+}
+.box3 .box3-box .box3-value .a1 {
+  grid-area: a1;
+}
+.box3 .box3-box .box3-value .a2 {
+  grid-area: a2;
+}
+.box3 .box3-box .box3-value .a3 {
+  grid-area: a3;
+}
+.box3 .box3-box .box3-value .a4 {
+  grid-area: a4;
+}
+.box3 .box3-box .box3-value .a5 {
+  grid-area: a5;
+}

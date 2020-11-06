@@ -76,3 +76,25 @@ function infoBoard() {
         box6.append(info);
     })
 }
+//当月车流
+function carFlow(num) {
+    var carflowNum = num;
+    var box3 = document.getElementById('box3_value');
+    box3.innerHTML = '';
+    var value = '0'.repeat(5 - carflowNum.toString().length) + carflowNum;
+    // console.log(value.length);
+    var result = '';
+    for (var i in value) {
+        result += `<a class="box3-value-a a${i + 1}">${value[i]}</a>`
+    }
+    box3.innerHTML = result;
+}
+//故障率
+// var process1;
+// function failureRate() {
+//     process1 = new ProgressBar('box8_1', '#1E9DD1', 34);
+
+// }
+// function test() {
+//     process1.setValue(50);
+// }
