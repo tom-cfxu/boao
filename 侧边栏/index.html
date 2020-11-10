@@ -59,9 +59,6 @@
 						<li><a href="#">14</a></li>
 					</ul>
 				</li>
-
-
-
 			</ul>
 		</section>
 	</aside>
@@ -72,6 +69,13 @@
 		$.sidebarMenu($('.sidebar-menu'))
 	</script>
 	<script type="text/javascript">
+		//一开始传默认值到iseez
+		function htmlInit() {
+			var li = $('li.child-active');
+			console.log(li.text());
+			window.OnReceive(li.text());
+		}
+
 		$('.treeview-menu').on('click', 'li', function () {
 			var $this = $(this);
 			var parent = $('.sidebar-menu').find('li.child-active').removeClass('child-active');
@@ -81,6 +85,7 @@
 			console.log($this.text())
 			window.OnReceive(menuName);
 		})
+		// htmlInit();
 	</script>
 </body>
 

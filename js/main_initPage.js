@@ -25,12 +25,12 @@ function tunnelInfo() {
     var box4 = document.getElementById('box4');
     //隧道基本信息
     tunnelArr = [
-        { id: "temp", title: "平均温度(℃)", value: " ", min: "", max: "" },
-        { id: "brightness", title: "亮度(%)", value: " ", min: "", max: "" },
-        { id: "speedLimit1", title: "限速1(km/h)", value: " ", min: "", max: "" },
-        { id: "speedLimit2", title: "限速2(km/h)", value: " ", min: "", max: "" },
-        { id: "speedLimit3", title: "限速3(km/h)", value: " ", min: "", max: "" },
-        { id: "speedLimit4", title: "限速4(km/h)", value: " ", min: "", max: "" },
+        { id: "temp", title: "平均温度(℃)", value: "0", min: "", max: "" },
+        { id: "brightness", title: "亮度(%)", value: "0", min: "", max: "" },
+        { id: "speedLimit1", title: "限速1(km/h)", value: "0", min: "", max: "" },
+        { id: "speedLimit2", title: "限速2(km/h)", value: "0", min: "", max: "" },
+        { id: "speedLimit3", title: "限速3(km/h)", value: "0", min: "", max: "" },
+        { id: "speedLimit4", title: "限速4(km/h)", value: "0", min: "", max: "" },
     ];
     box4.innerHTML = ``;
     tunnelArr.forEach((item, i) => {

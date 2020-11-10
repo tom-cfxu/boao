@@ -31,17 +31,24 @@
 
 <body>
 	<div id="container"></div>
+	<script src="js/mapStyle.js"></script>
+	<script src="js/mapStyle2.js"></script>
 	<script>
-		function SquareOverlay(center, name, color) {
+		function SquareOverlay(center, name) {
 			this._center = center;
 			this._name = name;
-			this._color = color;
+			// this._color = color;
 		}
 		// 继承API的BMap.Overlay
 		SquareOverlay.prototype = new BMap.Overlay();
 		// 实现初始化方法  
-		SquareOverlay.prototype.initialize = function () {
-			this
+		SquareOverlay.prototype.initialize = function (map) {
+			this._map = map;
+			var div = document.createElement("div");
+			div.style.position = "absolute";
+			div.style.width = this._length + "px";
+			div.style.height = this._length + "px";
+			// div.style.background = this._color;
 		}
 	</script>
 	<script type="text/javascript">
@@ -54,6 +61,7 @@
 		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 		map.setMinZoom(15);
 		map.setMaxZoom(19);
+		// map.setMapStyle({ styleJson: mapStyleV1 });//样式
 		var pointArr = [
 			{ name: '站点1', point: new BMap.Point(120.233506, 30.244835) },
 			{ name: '站点2', point: new BMap.Point(120.23295, 30.245147) },
