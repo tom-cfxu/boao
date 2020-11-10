@@ -7,6 +7,7 @@
     grid-template-rows:repeat(3,1fr);
     // padding: 10px;
     grid-gap: 10px;
+    padding: 10px;
     grid-template-areas: 
     "info1 info2"
     "info3 info4"
@@ -15,7 +16,7 @@
     div.box4-info{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         .info1{
             grid-area: info1;
@@ -65,7 +66,7 @@
             display: flex;
             width: 100%;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             input{
                 width: 40px;
@@ -78,6 +79,7 @@
                 // border: 0;
                 border-radius: 5px;
                 text-align: center;
+                margin-right: 15px;
             }
             
         }
