@@ -1,7 +1,7 @@
 html,body{
     width: 100%;
     height: 100%;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     background-image: radial-gradient(#11286E 5%, #0D1836 60%);
@@ -76,10 +76,11 @@ html,body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                img.menu-icon{
+                .menu-icon{
                     display: block;
-                    width: 30px;
-                    height: 30px;
+                    path{
+                        fill: #5dc9ff !important;
+                    }
                 }
                 span{
                     display: block;
@@ -116,7 +117,7 @@ html,body{
         grid-area: cell8;
     }
 }
-a.btn_change{
+.btn_change{
     display: inline-block;
     text-align: center;
     line-height: 25px;
@@ -128,6 +129,9 @@ a.btn_change{
     border-radius: 5px;
     &:active{
         transform: scale(0.9);
+    }
+    &.delete{
+        background-color: #d11d1d;
     }
 }
 .map{

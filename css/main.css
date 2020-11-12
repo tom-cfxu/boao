@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   background-image: radial-gradient(#11286E 5%, #0D1836 60%);
@@ -65,10 +66,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-.main .cell .box p.menu img.menu-icon {
+.main .cell .box p.menu .menu-icon {
   display: block;
-  width: 30px;
-  height: 30px;
+}
+.main .cell .box p.menu .menu-icon path {
+  fill: #5dc9ff !important;
 }
 .main .cell .box p.menu span {
   display: block;
@@ -101,7 +103,7 @@ body {
 .main .cell8 {
   grid-area: cell8;
 }
-a.btn_change {
+.btn_change {
   display: inline-block;
   text-align: center;
   line-height: 25px;
@@ -112,8 +114,11 @@ a.btn_change {
   user-select: none;
   border-radius: 5px;
 }
-a.btn_change:active {
+.btn_change:active {
   transform: scale(0.9);
+}
+.btn_change.delete {
+  background-color: #d11d1d;
 }
 .map {
   width: 100%;

@@ -11,7 +11,10 @@
     width: 8px;
     height: 8px;
 }
-
+@font-face {
+                    font-family: yejing;
+                    src: url('/fonts/LESLIE.ttf'),
+                }
 ::-webkit-scrollbar-track {
     background-color: #050917;
     -webkit-border-radius: 2em;

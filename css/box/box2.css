@@ -1,0 +1,34 @@
+.box2 {
+  padding: 10px;
+  width: inherit;
+  height: inherit;
+}
+#container {
+  width: inherit;
+  height: inherit;
+}
+.anchorBL {
+  display: none;
+}
+.map-marker {
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.map-marker-icon {
+  width: 30px;
+  height: 30px;
+}
+.map-marker-title {
+  width: 60px;
+  text-align: center;
+  color: #1296DB;
+  text-shadow: #fff 1px 0 0, #fff 0 1px 0, #fff -1px 0 0, #fff 0 -1px 0;
+  font-weight: bolder;
+}
+.map-marker-title.red {
+  color: #F95C5D !important;
+}

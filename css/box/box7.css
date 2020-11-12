@@ -1,7 +1,73 @@
 .box7 {
-  width: 100%;
+  width: 50vw;
   height: inherit;
   position: relative;
+  overflow: auto;
+}
+.box7 ul.box7-thead {
+  width: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 5px;
+}
+.box7 ul.box7-thead li.box7-thead-li {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #00AC92;
+  color: #fff;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.box7 ul.box7-thead li.box7-thead-li.detail {
+  flex-grow: 1;
+}
+.box7 ul.box7-thead li.box7-thead-li.caozuo {
+  width: 50px;
+}
+.box7 ul.box7-tbody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 23vh;
+  overflow: auto;
+  padding: 0 5px;
+}
+.box7 ul.box7-tbody .box7-tbody-li {
+  width: 100%;
+}
+.box7 ul.box7-tbody .box7-tbody-li ul.box7-tbody-tr {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.box7 ul.box7-tbody .box7-tbody-li ul.box7-tbody-tr:hover {
+  background-color: #a8d5f322;
+}
+.box7 ul.box7-tbody .box7-tbody-li ul.box7-tbody-tr.alarm {
+  animation: 1s box7AlarmBox linear infinite;
+}
+.box7 ul.box7-tbody .box7-tbody-li ul.box7-tbody-tr li {
+  width: 150px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.box7 ul.box7-tbody .box7-tbody-li ul.box7-tbody-tr li.detail {
+  flex-grow: 1;
+}
+.box7 ul.box7-tbody .box7-tbody-li ul.box7-tbody-tr .caozuo {
+  width: 50px !important;
+  margin-left: 30px;
 }
 .cell7 .alarm-border {
   position: absolute;
@@ -9,7 +75,7 @@
   width: 100% ;
   height: 100% ;
   background-color: transparent;
-  border: 5px dashed #F95C5D;
+  border: 5px dashed transparent;
   overflow: hidden;
 }
 .cell7 .alarm-border.alarm {
@@ -23,9 +89,15 @@
   animation: box7SafeBorder 1s  linear;
   animation-fill-mode: forwards;
 }
-@keyframes rotate {
-  to {
-    transform: rotate(1turn);
+@keyframes box7AlarmBox {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #f75656b7;
+  }
+  100% {
+    background-color: transparent;
   }
 }
 @keyframes box7AlarmBorder {

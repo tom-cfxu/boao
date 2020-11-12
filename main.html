@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博鳌隧道</title>
+
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/box/box1.css">
+    <link rel="stylesheet" href="./css/box/box2.css">
     <link rel="stylesheet" href="./css/box/box3.css">
     <link rel="stylesheet" href="./css/box/box4.css">
     <link rel="stylesheet" href="./css/box/box5.css">
@@ -15,6 +17,7 @@
     <link rel="stylesheet" href="./css/box/box7.css">
     <link rel="stylesheet" href="./css/box/box8.css">
     <script src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="map_load.js"></script>
 </head>
 
 <body>
@@ -31,14 +34,14 @@
                             <div class="box1-icon box1-icon1">车</div>
                             <p class="box1-right-info">
                                 总车辆数
-                                <span id="box1-sum" class="box1-right-value">60 辆</span>
+                                <span id="box1-sum" class="box1-right-value">0 辆</span>
                             </p>
                         </div>
                         <div class="box1-right-div">
                             <div class="box1-icon box1-icon2">速</div>
                             <p class="box1-right-info">
                                 平均车速
-                                <span id="box1-speed" class="box1-right-value">60 km/h</span>
+                                <span id="box1-speed" class="box1-right-value">0 km/h</span>
                             </p>
                         </div>
                     </div>
@@ -48,7 +51,9 @@
         </div>
         <div class="cell cell2">
             <div class="content">
-                <iframe class="map" src="./map.html" frameborder="0"></iframe>
+                <div class="box2">
+                    <div id="container"></div>
+                </div>
             </div>
         </div>
         <div class="cell cell3">
@@ -56,7 +61,7 @@
                 <div id="box3" class="box3">
                     <div class="box3-box">
                         <span id="box3_title" class="box3-title">
-                            当月车流
+                            当日车流
                         </span>
                         <div id="box3_value" class="box3-value">
 
@@ -86,9 +91,35 @@
         </div>
         <div class="cell cell7">
             <div class="content box">
-                <div id="box7" class="box7"></div>
+                <div id="box7" class="box7">
+                    <!-- 表头 -->
+                    <!-- <button type="button" onclick="alarmButton(true)">开启报警</button> -->
+                    <!-- <button type="button" onclick="alarmButton(false)">关闭报警</button> -->
+                    <!-- <button type="button" onclick="addAlarmList({
+                    startTime: ' 2020-10-11 10:16:10', 
+                    address: '分区4' , 
+                    deviceName: '设备名称1' , 
+                    alarmDetail: '报警详情1' ,
+                    system: '所属系统1' , 
+                    endTime: '2020-10-11 12:12:12' , 
+                    alarmLevel: 'high'//high normal
+                    })">添加报警</button> -->
+                    <ul class="box7-thead">
+                        <li class="box7-thead-li">开始时间</li>
+                        <li class="box7-thead-li">分区</li>
+                        <li class="box7-thead-li">设备名称</li>
+                        <li class="box7-thead-li detail">报警详情</li>
+                        <li class="box7-thead-li">所属系统</li>
+                        <li class="box7-thead-li">结束时间</li>
+                        <li class="box7-thead-li caozuo">操作</li>
+                    </ul>
+                    <!-- 表内容 -->
+                    <ul id="box7-tbody" class="box7-tbody">
+
+                    </ul>
+                </div>
             </div>
-            <div id="alarm-border" class="alarm-border alarm">
+            <div id="alarm-border" class="alarm-border">
             </div>
         </div>
         <div class="cell cell8">
@@ -103,11 +134,12 @@
         </div>
     </div>
     <script src="js/changeValue.js"></script>
-
+    <script type="text/javascript" src="./js/map.js"></script>
     <script src="js/main_initPage.js"></script>
     <script src="js/main_echart.js"></script>
-    <script src="js/canvas.js"></script>
+    <script src="js/cef.js"></script>
     <script src="js/onload.js"></script>
+
 </body>
 
 </html>
