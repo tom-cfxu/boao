@@ -17,7 +17,8 @@ function box4_changevalue(input, input_show, title) {
 }
 //修改情报板
 function box6_changeMsg(title, msg) {
-    var msgNew = window.prompt("请输入新值", msg.innerText);
+    // var title2 = msg.getAttribute('title');
+    var msgNew = window.prompt("请输入新值", msg.getAttribute('title'));
     if (msgNew != null) {
         msg.innerText = limitNumber(msgNew, 13);
         msg.setAttribute('title', msgNew);
