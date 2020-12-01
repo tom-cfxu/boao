@@ -69,7 +69,7 @@ window.onload = () => {
     info_tunnel(tunnelObj);
     info_board(infoBoardArr);
     initPage();
-    car_flow(93400);
+    car_flow(934000);
     info_car(carObj);
     carFlow_line(yArr, length);//当月车流
     setMyEchart8();

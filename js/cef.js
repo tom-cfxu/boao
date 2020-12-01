@@ -12,7 +12,7 @@ function car_flow(num) {
     var carflowNum = num;
     var box3 = document.getElementById('box3_value');
     box3.innerHTML = '';
-    var value = '0'.repeat(5 - carflowNum.toString().length) + carflowNum;
+    var value = '0'.repeat(6 - carflowNum.toString().length) + carflowNum;
     // console.log(value.length);
     var result = '';
     for (var i in value) {
