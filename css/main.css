@@ -16,6 +16,8 @@ body {
 .main {
   flex-grow: 1;
   padding: 10px;
+  padding-top: 0;
+  padding-left: 12px;
   width: 100vw;
   height: 100%;
   display: grid;
