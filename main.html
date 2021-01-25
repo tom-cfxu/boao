@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/box/box6.css">
     <link rel="stylesheet" href="./css/box/box7.css">
     <link rel="stylesheet" href="./css/box/box8.css">
+    <script type="text/javascript" src="./js/echarts.min.js"></script>
 </head>
 
 <body>
@@ -50,7 +51,8 @@
         <div class="cell cell2">
             <div class="content">
                 <div class="box2">
-                    <div id="container"></div>
+                    <div id="container">
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +73,46 @@
         <div class="cell cell4">
             <div class="content box ">
                 <div id="box4" class="box4">
-                    <div class="loading">加载中...</div>
+                    <div class="box4-info info1">
+                        <div class="box4-info-left">
+                            <input disabled type="text" value="" id="${item.id}_show">
+                            <label>限速1(km/h)</label>
+                        </div>
+                        <div class="box4-info-right">
+                            <input type="text">
+                            <a class="btn_change">设置</a>
+                        </div>
+                    </div>
+                    <div class="box4-info info2">
+                        <div class="box4-info-left">
+                            <input disabled type="text" value="" id="${item.id}_show">
+                            <label>限速2(km/h)</label>
+                        </div>
+                        <div class="box4-info-right">
+                            <input type="text">
+                            <a class="btn_change">设置</a>
+                        </div>
+                    </div>
+                    <div class="box4-info info3">
+                        <div class="box4-info-left">
+                            <input disabled type="text" value="" id="${item.id}_show">
+                            <label>限速3(km/h)</label>
+                        </div>
+                        <div class="box4-info-right">
+                            <input type="text">
+                            <a class="btn_change">设置</a>
+                        </div>
+                    </div>
+                    <div class="box4-info info4">
+                        <div class="box4-info-left">
+                            <input disabled type="text" value="" id="${item.id}_show">
+                            <label>限速4(km/h)</label>
+                        </div>
+                        <div class="box4-info-right">
+                            <input type="text">
+                            <a class="btn_change">设置</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,7 +126,42 @@
         <div class="cell cell6">
             <div class="content box ">
                 <div id="box6" class="box6">
-                    <div class="loading">加载中...</div>
+                    <p class="box6-p">
+                        <span class="box6_title">情报板Z1</span>
+                        <span class="box6_msg">
+                            <span></span>
+                        </span>
+                        <a class="btn_change">
+                            修改
+                        </a>
+                    </p>
+                    <p class="box6-p">
+                        <span class="box6_title">情报板Z2</span>
+                        <span class="box6_msg">
+                            <span></span>
+                        </span>
+                        <a class="btn_change">
+                            修改
+                        </a>
+                    </p>
+                    <p class="box6-p">
+                        <span class="box6_title">情报板Y1</span>
+                        <span class="box6_msg">
+                            <span></span>
+                        </span>
+                        <a class="btn_change">
+                            修改
+                        </a>
+                    </p>
+                    <p class="box6-p">
+                        <span class="box6_title">情报板Y2</span>
+                        <span class="box6_msg">
+                            <span></span>
+                        </span>
+                        <a class="btn_change">
+                            修改
+                        </a>
+                    </p>
                 </div>
 
             </div>
@@ -126,13 +202,12 @@
             </div>
         </div>
     </div>
-    <script src="./js/echarts.min.js"></script>
     <script type="text/javascript" src="map_load.js"></script>
-    <script src="js/changeValue.js"></script>
+    <script type="text/javascript" src="./js/changeValue.js"></script>
     <script type="text/javascript" src="./js/map.js"></script>
-    <script src="js/main_initPage.js"></script>
-    <script src="js/main_echart.js"></script>
-    <script src="js/cef.js"></script>
+    <script type="text/javascript" src="js/main_initPage.js"></script>
+    <script type="text/javascript" src="js/main_echart.js"></script>
+    <script type="text/javascript" src="js/cef.js"></script>
     <script src="js/onload.js"></script>
 
 </body>
