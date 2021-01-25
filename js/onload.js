@@ -44,8 +44,8 @@ var carObj = {
     speed: '50'
 };
 var tunnelObj = {
-    temp: "0",//温度
-    brightness: "0",//亮度
+    // temp: "0",//温度
+    // brightness: "0",//亮度
     speedLimit1: "0",//限速1
     speedLimit2: "0",//限速2
     speedLimit3: "0",//限度3
@@ -73,5 +73,5 @@ window.onload = () => {
     info_car(carObj);
     carFlow_line(yArr, length);//当月车流
     setMyEchart8();
-    alarmList(alarmArr);
+    // alarmList(alarmArr);
 }

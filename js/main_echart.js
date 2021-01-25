@@ -68,19 +68,21 @@ function option2(xData, sData) {
         dataZoom: [
             {
                 type: 'slider',
+                height: 10,
+                bottom: '5%',
                 handleStyle: {
-                    // borderWidth: 0,
-                    color: color1
+                    color: color1,
                 },
+                handleSize: '200%',
                 handleIcon: 'M827.505255 195.268312C652.829957 20.593014 369.558335 20.593014 194.883037 195.269335 20.202623 369.94975 20.201599 653.220349 194.876897 827.895647c174.681438 174.681438 457.952037 174.679391 632.632451 0C1002.18567 653.220349 1002.18567 369.94975 827.505255 195.268312zM352.449679 703.530175l-63.700811 0L288.748868 319.832306l63.700811 0L352.449679 703.530175zM543.467177 703.530175l-63.700811 0L479.766366 319.832306l63.700811 0L543.467177 703.530175zM735.848743 703.530175l-63.700811 0L672.147932 319.832306l63.700811 0L735.848743 703.530175z',
                 borderColor: 'transparent',
                 textStyle: {
                     color: '#fff'
                 }
             },
-            {
-                type: 'inside'
-            },
+            // {
+            //     type: 'inside'
+            // },
         ],
         xAxis: {
             type: 'category',
@@ -236,9 +238,9 @@ function option8(color, name, precent) {
 }
 function setMyEchart8() {
     initEchart(myEchart8('box8_1'), option8('#3FA7DC', '设备1', 60));
-    initEchart(myEchart8('box8_2'), option8('#00AC92', '设备2', 30));
-    initEchart(myEchart8('box8_3'), option8('#F95C5D', '设备3', 40));
-    initEchart(myEchart8('box8_4'), option8('#FE8642', '设备4', 50));
+    // initEchart(myEchart8('box8_2'), option8('#00AC92', '设备2', 30));
+    // initEchart(myEchart8('box8_3'), option8('#F95C5D', '设备3', 40));
+    // initEchart(myEchart8('box8_4'), option8('#FE8642', '设备4', 50));
 }
 
 

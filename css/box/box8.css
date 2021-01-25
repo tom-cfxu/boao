@@ -2,21 +2,8 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "b1 b2" "b3 b4";
-  grid-gap: 10px;
-  padding: 10px;
 }
 .box8 #box8_1 {
-  grid-area: b1;
-}
-.box8 #box8_2 {
-  grid-area: b2;
-}
-.box8 #box8_3 {
-  grid-area: b3;
-}
-.box8 #box8_4 {
-  grid-area: b4;
+  width: 100%;
+  height: inherit;
 }

@@ -87,4 +87,4 @@ function map_marker() {
         map.addOverlay(mySquare);
     })
 }
-map_marker();
+// map_marker();

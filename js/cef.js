@@ -27,8 +27,8 @@ function info_tunnel(obj) {
     var box4 = document.getElementById('box4');
     //隧道基本信息
     var tunnelArr = [
-        { id: "temp", title: "平均温度(℃)", isCanChange: false, value: temp, },
-        { id: "brightness", title: "亮度(%)", isCanChange: false, value: brightness, },
+        // { id: "temp", title: "平均温度(℃)", isCanChange: false, value: temp, },
+        // { id: "brightness", title: "亮度(%)", isCanChange: false, value: brightness, },
         { id: "speedLimit1", title: "限速1(km/h)", isCanChange: true, value: speedLimit1, },
         { id: "speedLimit2", title: "限速2(km/h)", isCanChange: true, value: speedLimit2, },
         { id: "speedLimit3", title: "限速3(km/h)", isCanChange: true, value: speedLimit3, },
@@ -118,9 +118,9 @@ function alarm_button(bool) {
 //故障率
 function failure_rate(array) {
     initEchart(myEchart8('box8_1'), option8('#3FA7DC', array[0].title, array[0].precent));
-    initEchart(myEchart8('box8_2'), option8('#00AC92', array[1].title, array[1].precent));
-    initEchart(myEchart8('box8_3'), option8('#F95C5D', array[2].title, array[2].precent));
-    initEchart(myEchart8('box8_4'), option8('#FE8642', array[3].title, array[3].precent));
+    // initEchart(myEchart8('box8_2'), option8('#00AC92', array[1].title, array[1].precent));
+    // initEchart(myEchart8('box8_3'), option8('#F95C5D', array[2].title, array[2].precent));
+    // initEchart(myEchart8('box8_4'), option8('#FE8642', array[3].title, array[3].precent));
 
 }
 
