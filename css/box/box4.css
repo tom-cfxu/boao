@@ -59,7 +59,7 @@
   align-items: center;
 }
 .box4 div.box4-info .box4-info-right input {
-  width: 40px;
+  width: 50px;
   height: 25px;
   background-color: transparent;
   border: 1px solid #1D9CD1;
@@ -67,5 +67,5 @@
   outline: none;
   border-radius: 5px;
   text-align: center;
-  margin-right: 15px;
+  margin-right: 5px;
 }
