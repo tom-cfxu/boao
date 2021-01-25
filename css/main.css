@@ -20,7 +20,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(12, 1fr);
-  grid-template-areas: 'cell1 cell2 cell3' 'cell1 cell2 cell5' 'cell1 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell8' 'cell4 cell2 cell8' 'cell6 cell2 cell8' 'cell6 cell2 cell8' 'cell6 cell2 cell8' 'cell6 cell2 cell8';
+  grid-template-areas: 'cell1 cell2 cell3' 'cell1 cell2 cell5' 'cell1 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell5' 'cell4 cell2 cell8' 'cell6 cell2 cell8' 'cell6 cell2 cell8' 'cell6 cell2 cell8' 'cell6 cell2 cell8' 'cell6 cell2 cell8';
   grid-gap: 10px;
 }
 .main .cell {
