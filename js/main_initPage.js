@@ -24,7 +24,7 @@ function initPage() {
         menu.classList.add("menu");
         menu.innerHTML = `
             <img class="menu-icon" style="width:30px;height:30px" src="${menuArr[i].iconUrl}" >
-            <span>${menuArr[i].title}</span>
+            &nbsp;&nbsp;<span>${menuArr[i].title}</span>
         `
         box.appendChild(menu);
     })

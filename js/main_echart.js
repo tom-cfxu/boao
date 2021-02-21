@@ -198,13 +198,13 @@ function option8(color, name, precent) {
                 name: '故障率',
                 // animation: false,
                 type: 'pie',
-                radius: ['65%', '80%'],
+                radius: ['55%', '80%'],
                 center: ['50%', '50%'],
                 avoidLabelOverlap: false,
                 label: {
                     show: true,
                     position: 'center',
-                    fontSize: '15',
+                    fontSize: '24',
                     fontWeight: 'bold',
                     formatter: '{b}\n\n{d}%'
                 },
