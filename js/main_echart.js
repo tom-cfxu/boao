@@ -212,6 +212,7 @@ function option8(color, name, precent) {
                     show: false
                 },
                 silent: false,
+                animation:false,
                 data: [
                     {
                         value: precent,
@@ -229,6 +230,11 @@ function option8(color, name, precent) {
                         },
                         tooltip: {
                             show: false,
+                        },
+                        emphasis:{
+                            itemStyle:{
+                                color:'#D5D5D555',
+                            }
                         }
                     },
                 ]
