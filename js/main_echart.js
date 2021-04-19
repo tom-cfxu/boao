@@ -212,7 +212,7 @@ function option8(color, name, precent) {
                     show: false
                 },
                 silent: false,
-                animation:false,
+                animation: false,
                 data: [
                     {
                         value: precent,
@@ -231,9 +231,9 @@ function option8(color, name, precent) {
                         tooltip: {
                             show: false,
                         },
-                        emphasis:{
-                            itemStyle:{
-                                color:'#D5D5D555',
+                        emphasis: {
+                            itemStyle: {
+                                color: '#D5D5D555',
                             }
                         }
                     },
@@ -242,11 +242,71 @@ function option8(color, name, precent) {
         ]
     };
 }
+function option8_2(name, data, total) {
+    return {
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            show: false,
+            left: 'center',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        series: [
+            {
+                name: name,
+                type: 'pie',
+                radius: ['40%', '75%'],
+                center: ['50%', '50%'],
+                avoidLabelOverlap: false,
+                itemStyle: {
+                    borderRadius: 10,
+                    borderColor: '#0E3C75',
+                    borderWidth: 2
+                },
+
+                label: {
+                    show: true,
+                    position: 'center',
+                    formatter: `总报警数:${total}`,
+                    fontSize: '20',
+                    fontWeight: 'bold',
+                    color: '#EF363D'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '20',
+                        // formatter: `{b}`,
+                        fontWeight: 'bold',
+                        color: '#EF363D'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [...data]
+            }
+        ]
+    }
+}
 function setMyEchart8() {
-    initEchart(myEchart8('box8_1'), option8('#3FA7DC', '设备1', 60));
-    // initEchart(myEchart8('box8_2'), option8('#00AC92', '设备2', 30));
-    // initEchart(myEchart8('box8_3'), option8('#F95C5D', '设备3', 40));
-    // initEchart(myEchart8('box8_4'), option8('#FE8642', '设备4', 50));
+    const name = '报警数量';
+    const data = [
+        { value: 1048, name: '通风系统' },
+        { value: 735, name: '交通监控' },
+        { value: 580, name: '照明系统' },
+        { value: 484, name: '排水系统' },
+        { value: 300, name: '火灾报警' },
+        { value: 735, name: '可燃气体检测系统' },
+        { value: 580, name: '有线电话和广播' },
+        { value: 484, name: '视频监控系统' },
+    ];
+    let i = 0;
+    const total = data.reduce((i, item) => i + item.value, 0);
+    initEchart(myEchart8('box8_1'), option8_2(name, data, total));
 }
 
 

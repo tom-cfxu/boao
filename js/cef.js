@@ -123,4 +123,10 @@ function failure_rate(array) {
     // initEchart(myEchart8('box8_4'), option8('#FE8642', array[3].title, array[3].precent));
 
 }
+//各系统报警数
+function system_alarm(obj) {
+    let i = 0;
+    const total = array[0].data.reduce((i, item) => i + item.value, 0);
+    initEchart(myEchart8('box8_1'), option8_2(obj.name, obj.data, total));
+}
 
