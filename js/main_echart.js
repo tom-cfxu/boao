@@ -12,7 +12,9 @@ function option1(left, right) {
         tooltip: {
             trigger: 'item',
             formatter: '{a} <br/>{b}: {c} ({d}%)',
-            position: ['80%', '30%']
+            position: (point)=>{
+                return [point[0], '10%'];
+            }
         },
         legend: {
             show: false,
