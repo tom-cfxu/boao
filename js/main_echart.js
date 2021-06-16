@@ -295,14 +295,14 @@ function option8_2(name, data, total) {
 function setMyEchart8() {
     const name = '报警数量';
     const data = [
-        { value: 1048, name: '通风系统' },
-        { value: 735, name: '交通监控' },
-        { value: 580, name: '照明系统' },
-        { value: 484, name: '排水系统' },
-        { value: 300, name: '火灾报警' },
-        { value: 735, name: '可燃气体检测系统' },
-        { value: 580, name: '有线电话和广播' },
-        { value: 484, name: '视频监控系统' },
+        { value: 0, name: '通风系统' },
+        { value: 0, name: '交通监控' },
+        { value: 0, name: '照明系统' },
+        { value: 0, name: '排水系统' },
+        { value: 0, name: '火灾报警' },
+        { value: 0, name: '可燃气体检测系统' },
+        { value: 0, name: '有线电话和广播' },
+        { value: 0, name: '视频监控系统' },
     ];
     let i = 0;
     const total = data.reduce((i, item) => i + item.value, 0);

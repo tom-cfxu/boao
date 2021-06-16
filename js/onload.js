@@ -38,10 +38,10 @@
 //     },
 // ];
 var carObj = {
-    left: '20',
-    right: '50',
-    total: '70',
-    speed: '50'
+    left: '0',
+    right: '0',
+    total: '0',
+    speed: '0'
 };
 var tunnelObj = {
     // temp: "0",//温度
@@ -52,15 +52,15 @@ var tunnelObj = {
     speedLimit4: "0",//限速4
 };
 var infoBoardArr = [
-    { title: '情报板Z1', content: '前方发生事故,请减速慢行!' },
-    { title: '情报板Z2', content: '前方发生事故,请减速慢行!' },
-    { title: '情报板Y1', content: '前方发生事故,请减速慢行!' },
-    { title: '情报板Y2', content: '前方发生事故,请减速慢行!' },
+    { title: '情报板Z1', content: '空' },
+    { title: '情报板Z2', content: '空' },
+    { title: '情报板Y1', content: '空' },
+    { title: '情报板Y2', content: '空' },
 ]
 //近一个月车流
 var length = 31;
 var yArr = new Array(length).fill(null).map(() => {
-    return r(20, 100);
+    return 0;
 }).reverse();
 function testCef() {
     window.alert("你好!")
@@ -69,7 +69,7 @@ window.onload = () => {
     info_tunnel(tunnelObj);
     info_board(infoBoardArr);
     initPage();
-    car_flow(934000);
+    car_flow(0);
     info_car(carObj);
     carFlow_line(yArr, length);//当月车流
     setMyEchart8();

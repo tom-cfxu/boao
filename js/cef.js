@@ -27,8 +27,6 @@ function info_tunnel(obj) {
     var box4 = document.getElementById('box4');
     //隧道基本信息
     var tunnelArr = [
-        // { id: "temp", title: "平均温度(℃)", isCanChange: false, value: temp, },
-        // { id: "brightness", title: "亮度(%)", isCanChange: false, value: brightness, },
         { id: "speedLimit1", title: "限速1(km/h)", isCanChange: true, value: speedLimit1, },
         { id: "speedLimit2", title: "限速2(km/h)", isCanChange: true, value: speedLimit2, },
         { id: "speedLimit3", title: "限速3(km/h)", isCanChange: true, value: speedLimit3, },
@@ -44,16 +42,6 @@ function info_tunnel(obj) {
                 <input disabled type="text" value="${item.value}" id="${item.id}_show">
                 <label>${item.title}</label>
             </div>
-            ${item.isCanChange ?
-                `<div class="box4-info-right">
-                <input type="text" id="${item.id}">
-                <a class="btn_change" onclick="box4_changevalue(${item.id},${item.id}_show,'tunnel0${i + 1}')">设置</a>
-            </div>`
-                :
-                ``
-            }
-            
-            
         `;
         box4.append(info);
     })
@@ -71,9 +59,6 @@ function info_board(arr) {
             <span class="box6_msg" >
                 <span id="box6_msg${i + 1}" title="${item.content}">${limitNumber(item.content)}</span>
             </span>
-            <a class="btn_change" onclick="box6_changeMsg(box6_msg_title${i + 1},box6_msg${i + 1})">
-                修改
-            </a>
         `;
         box6.append(info);
     })
@@ -130,13 +115,19 @@ function system_alarm(obj) {
     initEchart(myEchart8('box8_1'), option8_2(obj.name, obj.data, total));
 }
 // //测试
-// function test_alarm() {
-//     system_alarm({
-//         name: '123',
-//         data: [
-//             { value: 1, name: '123' },
-//             { value: 1, name: '1234' },
-//             { value: 1, name: '456' }
-//         ]
-//     })
-// }
+function test_alarm() {
+    system_alarm(
+        {
+            name: '报警数量',
+            data: [
+                { value: 1, name: '通风系统' },
+                { value: 2, name: '交通监控系统' },
+                { value: 3, name: '照明系统' },
+                { value: 4, name: '排水系统' },
+                { value: 5, name: '火灾报警系统' },
+                { value: 6, name: '可燃气体检测系统' },
+                { value: 7, name: '有线电话与广播系统' },
+                { value: 8, name: '视屏监控系统' }
+            ]
+        })
+}
