@@ -1,11 +1,20 @@
+// //车辆信息
+// function info_car(obj) {
+//     var { left, right, total, speed } = obj;
+//     setEcahrt1(left, right);
+//     var sum = document.getElementById('box1-sum');
+//     var avg = document.getElementById('box1-speed');
+//     sum.innerText = total + ' 辆';
+//     avg.innerText = speed + ' km/h';
+// }
 //车辆信息
 function info_car(obj) {
-    var { left, right, total, speed } = obj;
+    const { left, right, west, east } = obj;
     setEcahrt1(left, right);
-    var sum = document.getElementById('box1-sum');
-    var avg = document.getElementById('box1-speed');
-    sum.innerText = total + ' 辆';
-    avg.innerText = speed + ' km/h';
+    const westCar = document.getElementById('box1-sum');
+    const eastCar = document.getElementById('box1-speed');
+    westCar.innerText = west + ' 辆';
+    eastCar.innerText = east + ' 辆';
 }
 //当日车流
 function car_flow(num) {
@@ -64,8 +73,8 @@ function info_board(arr) {
     })
 }
 //近一个月车流
-function carFlow_line(yArr, length = 30) {
-    length = parseInt(length);
+function carFlow_line(yArr) {
+    const length = yArr.length;
     var dayArr = new Array(length).fill(null).map((_, i) => {
         return getDay(-i);
     }).reverse();

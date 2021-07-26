@@ -306,9 +306,11 @@ function setMyEchart8() {
         { value: 0, name: '有线电话和广播' },
         { value: 0, name: '视频监控系统' },
     ];
-    let i = 0;
     const total = data.reduce((i, item) => i + item.value, 0);
     initEchart(myEchart8('box8_1'), option8_2(name, data, total));
 }
-
+function alarm_info(name,data){
+    const total = data.reduce((i, item) => i + item.value, 0);
+    initEchart(myEchart8('box8_1'), option8_2(name, data, total));
+}
 
